@@ -19,10 +19,11 @@ body {
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 60% 40% 60% 40% / 60% 40% 60% 40%;
     margin-bottom: 20px;
     object-fit: cover;
     border: 10px double grey;
+    animation: flow 10s infinite ease-in-out;
 }
 
 .header {
@@ -53,9 +54,11 @@ body {
     font-size: 1.2rem;
     font-weight: 450;
     margin-bottom: 20px;
-    color: #686D76;
+    color: darkslategrey;
+    background-color: whitesmoke;
+    backdrop-filter: blur(50px);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
 }
 
 .link:hover {
@@ -63,9 +66,28 @@ body {
     height: 42px;
     background: #686D76;
     color: #ffff;
+    box-shadow: 3px 3px 10px grey;
 }
 
 p{
     color: black;
     opacity: 80%;
+}
+
+@keyframes flow{
+    0%{ 
+        border-radius: 60% 40% 60% 40% / 60% 40% 60% 40%;
+    }
+    25%{
+        border-radius: 80% 70% 60% 60% / 80% 70% 60% 60% ;
+    }
+    50%{
+        border-radius: 70% 90% 60% 70% / 80% 90% 50% 90%;
+    }
+    75%{
+        border-radius: 80% 70% 60% 60% / 80% 70% 60% 60% ;
+    }
+    100%{ 
+        border-radius: 60% 40% 60% 40% / 60% 40% 60% 40%;
+    }
 }
